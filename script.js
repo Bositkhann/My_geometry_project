@@ -1,5 +1,4 @@
 const questions = [
-   const questions = [
     { question: "Ikki perpendikulyar to'g'ri chiziq orasidagi burchak qancha?", correctAnswer: "Ha" },
     { question: "Uchburchakning burchaklarining yig'indisi 180 darajaga tengmi?", correctAnswer: "Ha" },
     { question: "To'g'ri moinada barcha tomonlar tengmi?", correctAnswer: "Ha" },
@@ -40,37 +39,47 @@ const questions = [
     { question: "Uchburchak uzunliklari 3 ta bir xil uzunlikda bo'ladimi?", correctAnswer: "Ha" },
 ];
 
-];
+let currentQuestionIndex = 0;
 
-let currentQuestion = 0;
+const questionContainer = document.getElementById("question-container");
+const questionElement = document.getElementById("question");
+const answerElement = document.getElementById("answer");
+const yesButton = document.getElementById("yes-btn");
+const noButton = document.getElementById("no-btn");
+const nextButton = document.getElementById("next-btn");
 
-function getRandomQuestion() {
-    currentQuestion = Math.floor(Math.random() * questions.length);
-    showQuestion();
+function startGame() {
+    currentQuestionIndex = 0;
+    nextButton.style.display = "none";
+    showQuestion(questions[currentQuestionIndex]);
 }
 
-function showQuestion() {
-    document.getElementById("question").innerText = questions[currentQuestion].question;
-    document.getElementById("feedback").innerText = "";
+function showQuestion(question) {
+    questionElement.innerText = question.question;
+    answerElement.style.display = "none";
+    questionContainer.style.display = "block";
 }
 
-document.getElementById("yes").addEventListener("click", function() {
-    checkAnswer(true);
+yesButton.addEventListener("click", () => {
+    answerElement.innerText = "Javob: " + questions[currentQuestionIndex].correctAnswer;
+    answerElement.style.display = "block";
+    nextButton.style.display = "block";
 });
 
-document.getElementById("no").addEventListener("click", function() {
-    checkAnswer(false);
+noButton.addEventListener("click", () => {
+    answerElement.innerText = "Javob: " + questions[currentQuestionIndex].correctAnswer;
+    answerElement.style.display = "block";
+    nextButton.style.display = "block";
 });
 
-document.getElementById("next").addEventListener("click", getRandomQuestion);
-
-function checkAnswer(userAnswer) {
-    if (userAnswer === questions[currentQuestion].answer) {
-        document.getElementById("feedback").innerText = "Barakalla!";
+nextButton.addEventListener("click", () => {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        showQuestion(questions[currentQuestionIndex]);
     } else {
-        document.getElementById("feedback").innerText = " Xato , To'g'ri javob: " + (questions[currentQuestion].answer ? "Ha" : "Yo'q");
+        questionContainer.innerHTML = "<h2>O'yin tugadi!</h2>";
     }
-}
+});
 
-// Показать первый вопрос при загрузке страницы
-getRandomQuestion();
+// O'yin boshlanishi
+startGame();
