@@ -40,7 +40,7 @@ button#next {
     cursor: pointer;
 }
 .yes{
-    background-color: green;
+    background-color: chartreuse;
 }
 .no{
     background-color: red;
