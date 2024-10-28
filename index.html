@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +8,15 @@
 </head>
 <body>
     <div class="container">
-        <h3>Dasturchilar: [Akmalov Bositxon,Ro'zimurodov Ulug'bek , Sohibov Samandar]</h3>
-        
-        <p>Bu sayt bizning sevimli ustozimiz Xalilova Zamira Zaxriddinovna uchun Geometriya fanidan loyiha ishi sifatida yaratildi. </p>
-        <br><br><br>
-        <h1 id="question">Bu yerda Savollar bo'ladi</h1>
-        <div class="buttons">
-            <button id="yes">Ha</button>
-            <button id="no">Yo'q</button>
+        <h1>Geometriya Savollari</h1>
+        <p>Mualliflar: [Akmalov Bositxon], [Ro'zimurodov Ulug'bek]</p>
+        <div id="question-container">
+            <div id="question"></div>
+            <button id="yes-btn">Ha</button>
+            <button id="no-btn">Yo'q</button>
+            <button id="next-btn" style="display: none;">Keyingi</button>
+            <div id="answer" style="display: none;"></div>
         </div>
-        <p id="feedback"></p>
-        <button id="next">Keyingisi</button>
     </div>
     <script src="script.js"></script>
 </body>
