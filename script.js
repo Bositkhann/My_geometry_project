@@ -1,85 +1,84 @@
 const questions = [
-    { question: "Ikki perpendikulyar to'g'ri chiziq orasidagi burchak qancha?", correctAnswer: "Ha" },
-    { question: "Uchburchakning burchaklarining yig'indisi 180 darajaga tengmi?", correctAnswer: "Ha" },
-    { question: "To'g'ri moinada barcha tomonlar tengmi?", correctAnswer: "Ha" },
-    { question: "Barcha romblar – parallelogrammalarmi?", correctAnswer: "Ha" },
-    { question: "Uchburchak ikki to'g'ri burchakka ega bo'lishi mumkinmi?", correctAnswer: "Yo'q" },
-    { question: "Diskning maydoni πr² formulasiga ko'ra hisoblanadimi?", correctAnswer: "Ha" },
-    { question: "Teng tomonli uchburchakning barcha tomonlari tengmi?", correctAnswer: "Ha" },
-    { question: "Parallel to'g'ri chiziqlar kesishadimi?", correctAnswer: "Yo'q" },
-    { question: "To'g'ri burchakli uchburchakda gipotenuza – eng uzun tomonmi?", correctAnswer: "Ha" },
-    { question: "To'rtburchakning maydoni uning tomonlari ko'paytmasiga tengmi?", correctAnswer: "Ha" },
-    { question: "To'g'ri burchakli uchburchakning burchaklari har doim tengmi?", correctAnswer: "Yo'q" },
-    { question: "To'rtburchaklar 360 daraja yig'indisiga egami?", correctAnswer: "Ha" },
-    { question: "To'rtburchak – parallelogrammani o'z ichiga oladimi?", correctAnswer: "Ha" },
-    { question: "Romb ham parallelogrammadirmi?", correctAnswer: "Ha" },
-    { question: "Uchburchakda har bir tomonning uzunligi ikki boshqa tomonning uzunligiga teng bo'lishini taklif etuvchi ushbu formula to'g'rimi?", correctAnswer: "Yo'q" },
-    { question: "Ovozli burchakning barcha burchaklari tengmi?", correctAnswer: "Ha" },
-    { question: "Uchburchakning uzun tomoni gipotenuza deb atalishini taklif etuvchi formula to'g'rimi?", correctAnswer: "Ha" },
-    { question: "Butun 360 darajali bir qismdan turgan kvadratdan olingan burchak to'g'rimi?", correctAnswer: "Ha" },
-    { question: "Barcha to'rtburchaklar 360 darajali burchaklar orasida bo'ladimi?", correctAnswer: "Ha" },
-    { question: "Uchburchakda parallel to'g'ri chiziqlar bormidi?", correctAnswer: "Ha" },
-    { question: "Uchburchakda burchaklar bormidi?", correctAnswer: "Ha" },
-    { question: "Butun uchburchakda 3 burchak bormidi?", correctAnswer: "Ha" },
-    { question: "To'rtburchaklarning uzunliklari to'rt chiziqdan iboratmi?", correctAnswer: "Ha" },
-    { question: "Parallel to'g'ri chiziqlar har doim paralleldir?", correctAnswer: "Ha" },
-    { question: "Uchburchakda barcha burchaklar tengmi?", correctAnswer: "Ha" },
-    { question: "Ikki to'rtburchakda 90 darajaga teng burchaklar bormidi?", correctAnswer: "Ha" },
-    { question: "Uchburchaklarda 3 burchak bormidi?", correctAnswer: "Ha" },
-    { question: "Disk va kvadratning uzunliklari bir xilmi?", correctAnswer: "Yo'q" },
-    { question: "To'rtburchak – parallelogrammani o'z ichiga oladimi?", correctAnswer: "Ha" },
-    { question: "Butun uchburchak uzunliklari 90 darajali uzunlikda bo'ladimi?", correctAnswer: "Ha" },
-    { question: "Ikki parallel to'g'ri chiziqni kesgan to'g'ri chiziq va burchak bormidi?", correctAnswer: "Ha" },
-    { question: "Romb va to'rtburchakning har biri 90 darajaga tengmi?", correctAnswer: "Yo'q" },
-    { question: "Uchburchaklarning uch burchagi bormidi?", correctAnswer: "Ha" },
-    { question: "To'rtburchakda faqat 1 burchak bormidi?", correctAnswer: "Yo'q" },
-    { question: "Parallel to'g'ri chiziqlar har doim uzun bo'ladimi?", correctAnswer: "Ha" },
-    { question: "To'rtburchak – parallelogrammani o'z ichiga oladimi?", correctAnswer: "Ha" },
-    { question: "Ushbu uchburchakning burchagi 90 darajaga tengmi?", correctAnswer: "Ha" },
-    { question: "Uchburchak uzunliklari 3 ta bir xil uzunlikda bo'ladimi?", correctAnswer: "Ha" },
-];
+  
+   
+        { question: "Har bir uchburchakning burchaklarining yig'indisi 180 daraja.", answer: true },
+        { question: "Ikki parallel to'g'ri chiziq kesishishi mumkin.", answer: false },
+        { question: "To'g'ri burchakli uchburchakda gipotenuza eng uzun tomon.", answer: true },
+        { question: "Rombning barcha tomonlari tengdir.", answer: true },
+        { question: "Har bir to'rtburchakning burchaklari 90 daraja.", answer: false },
+        
+        { question: "Uchinchi burchakning o'rnini anglatadigan burchak to'g'ri burchakmi?", answer: false },
+        { question: "Parallelogramma uchta tomon teng.", answer: false },
+        { question: "Teng tomonli uchburchakda burchaklar teng.", answer: true },
+        { question: "Ikki to'g'ri chiziq parallel bo'lsa, ularning burchaklari har doim 180 daraja bo'ladi.", answer: false },
+        { question: "Har qanday to'g'ri burchakli uchburchakda 45 daraja burchak bo'lishi mumkin.", answer: true },
+        { question: "Har bir rombda to'rt to'g'ri burchak mavjud.", answer: false },
+        { question: "Ikki to'g'ri chiziq parallel bo'lsa, ularning burchaklari 90 daraja.", answer: false },
+        { question: "Uchburchakning barcha burchaklari har doim 60 daraja bo'ladi.", answer: false },
+        { question: "To'rtburchakda barcha burchaklar bir xil.", answer: true },
+        { question: "Romb va parallelogramma har doim teng.", answer: false },
+        { question: "To'g'ri burchakli uchburchakda burchaklarning yig'indisi 90 daraja.", answer: false },
+        { question: "Barcha parallelogrammalarning diagonallari bir-birini kesadi.", answer: true },
+        { question: "Burchaklar yig'indisi har doim 360 daraja.", answer: true },
+        { question: "To'rtburchakdagi har bir burchakning yig'indisi 360 daraja.", answer: true },
+        { question: "Uchinchi burchakning qiymati 90 daraja bo'lgan uchburchakda, qolgan burchaklar tengdir.", answer: false },
+       ,
+        { question: "Har bir parallelogramma ikkita qarama-qarshi to'g'ri burchakga ega.", answer: true },
+        { question: "Rombda hamma burchaklar tengdir.", answer: false },
+        { question: "To'rtburchakda ikkita diagonali har doim bir-birini kesishadi.", answer: true },
+        { question: "Har qanday uchburchakda burchaklar orasida kesishadigan chiziqlar mavjud.", answer: true },
+        
+        { question: "Ikki parallel chiziq va ularga kesuvchi chiziq bilan hosil qilingan burchaklar teng.", answer: true },
+        { question: "To'g'ri burchakli uchburchakda burchaklarning yig'indisi 270 daraja.", answer: false },
+        { question: "To'rtburchakda har bir diagonalning uzunligi teng.", answer: false },
+        { question: "Rombda faqat ikki burchak tengdir.", answer: false },
+        { question: "Burchakning hosil bo'lishi uchun har doim uchta to'g'ri chiziq kerak.", answer: false },
+        { question: "To'g'ri burchakli uchburchakda gipotenuza har doim eng uzun tomon.", answer: true },
+        { question: "To'rtburchakda faqat 2 ta to'g'ri burchak mavjud.", answer: false },
+        { question: "Burchakning hosil bo'lishi uchun kamida 2 ta to'g'ri chiziq kerak.", answer: true },
+     
+        { question: "To'rtburchakning har bir diagonali to'g'ri burchakli.", answer: false },
+        { question: "Har qanday rombning diagonali teng.", answer: false },
 
-let currentQuestionIndex = 0;
+        { question: "Burchaklarni o'lchashda har doim 90 daraja burchakdan foydalaniladi.", answer: false },
+        
+        { question: "Har qanday to'g'ri burchakli uchburchakda 3ta 90 daraja burchak mavjud.", answer: false },
+        
+        { question: "To'g'ri burchakli uchburchakning burchaklari 180 darajaga teng.", answer: true },
+        { question: "Barcha parallelogrammalarning har bir tomonlari teng.", answer: false }
+    ];
+    
 
-const questionContainer = document.getElementById("question-container");
-const questionElement = document.getElementById("question");
-const answerElement = document.getElementById("answer");
-const yesButton = document.getElementById("yes-btn");
-const noButton = document.getElementById("no-btn");
-const nextButton = document.getElementById("next-btn");
 
-function startGame() {
-    currentQuestionIndex = 0;
-    nextButton.style.display = "none";
-    showQuestion(questions[currentQuestionIndex]);
+let currentQuestion = 0;
+
+function getRandomQuestion() {
+    currentQuestion = Math.floor(Math.random() * questions.length);
+    showQuestion();
 }
 
-function showQuestion(question) {
-    questionElement.innerText = question.question;
-    answerElement.style.display = "none";
-    questionContainer.style.display = "block";
+function showQuestion() {
+    document.getElementById("question").innerText = questions[currentQuestion].question;
+    document.getElementById("feedback").innerText = "";
 }
 
-yesButton.addEventListener("click", () => {
-    answerElement.innerText = "Javob: " + questions[currentQuestionIndex].correctAnswer;
-    answerElement.style.display = "block";
-    nextButton.style.display = "block";
+document.getElementById("yes").addEventListener("click", function() {
+    checkAnswer(true);
 });
 
-noButton.addEventListener("click", () => {
-    answerElement.innerText = "Javob: " + questions[currentQuestionIndex].correctAnswer;
-    answerElement.style.display = "block";
-    nextButton.style.display = "block";
+document.getElementById("no").addEventListener("click", function() {
+    checkAnswer(false);
 });
 
-nextButton.addEventListener("click", () => {
-    currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
-        showQuestion(questions[currentQuestionIndex]);
+document.getElementById("next").addEventListener("click", getRandomQuestion);
+
+function checkAnswer(userAnswer) {
+    if (userAnswer === questions[currentQuestion].answer) {
+        document.getElementById("feedback").innerText = "Barakalla!";
     } else {
-        questionContainer.innerHTML = "<h2>O'yin tugadi!</h2>";
+        document.getElementById("feedback").innerText = "Noto'g'ri , to'g'ri javob: " + (questions[currentQuestion].answer ? "Ha" : "Yo'q");
     }
-});
+}
 
-// O'yin boshlanishi
-startGame();
+// Показать первый вопрос при загрузке страницы
+getRandomQuestion();
